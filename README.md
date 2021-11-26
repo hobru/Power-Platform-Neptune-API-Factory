@@ -1,7 +1,22 @@
 # Power-Platform-Neptune-API-Factory
 
 ## Sign up to the Netpune Developer Trial
+Go to https://www.neptune-software.com/free-trial/ scroll down and click on "Download Free Trial"
+
+Click on Register
+
+and fill in the required information. Select "Neptune DXP SAP edition [Planet 8]" and click on Register
+
+You should get an Email with the required information to sign in to the Netpune Software Account Portal. We will log onto the portal later on in step xx
+
 ## Sign up to the Power Platform Developer Trial
+Go to https://powerapps.microsoft.com/en-us/developerplan/ and sign up for the "Power Apps Developer Plan"
+
+Fill in the required information. 
+
+Note: If you have problems signing in with your work / school account, go to https://developer.microsoft.com/en-us/microsoft-365/dev-program and sign up for the Microsoft 365 Developer Program first. 
+
+
 
 With this we can switch over to the Power Platform, (https://us.flow.microsoft.com/en-us/)[https://us.flow.microsoft.com/en-us/]. 
 
