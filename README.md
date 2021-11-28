@@ -1,4 +1,5 @@
 # Power-Platform-Neptune-API-Factory
+This guide outlines the steps to get started with a simple Power App that connects to an SAP system using Neptunes API Factory. The scenario was also shown in a joint webinar with Neptune Software, (How Microsoft Power Platform customers can connect to SAP backends)[https://info.neptune-software.com/acton/media/23527/microsoft-power-plaftorm-and-neptune-dxp]
 
 ## Sign up to the Netpune Developer Trial
 Go to https://www.neptune-software.com/free-trial/ scroll down and click on "Download Free Trial"
