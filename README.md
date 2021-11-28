@@ -25,7 +25,7 @@ Note: If you have problems signing in with your work / school account, go to htt
 After registration to the Neptune Developer Trial you will get credentials and a link to login to the Neptune Portal. From there Click on Product Download -> Download Now
 ![Neptune Portal](Images/06-DownloadNeptune.jpg)
 
-From the Neptune DX Platform - SAP Edition, select "Long Term Support Release -> DXP 21 (2021) and download the ZIP file. 
+From the Neptune DX Platform - SAP Edition, select *Long Term Support Release* -> *DXP 21 (2021)* and download the ZIP file. 
 ![Download DXP](Images/07-DownloadDXP21.jpg)
 
 Now follow the instructions outlined in the Neptune-DXP SAP Edition Installation-Guide.pdf and install the two transport files. 
