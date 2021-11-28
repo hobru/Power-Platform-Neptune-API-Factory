@@ -64,32 +64,35 @@ Under Data -> Customer Connectors click on "+ New custom connector" and select "
 ![Download](Images\19-PowerPlatformImport.jpg)
 
 
-Enter the URL from the Swagger.ui, e.g. https://*yourSAPSystem*:*port*/neptune/api/dynamic/neptune/cl_dr_lib_ddic_shlp_x/SH/DEBIA/swagger.json?oas_version=2.0&sap-user=*user*&sap-password=*password*
- Make sure to replace the *user* and *password* with the username and password of your SAP system (alternatively you can also download and upload the Swagger file)
-  
-and click on Import -> Continue
+Enter the URL from the Swagger.ui, e.g. 
+
+https://*yourSAPSystem*:*port*/neptune/api/dynamic/neptune/cl_dr_lib_ddic_shlp_x/SH/DEBIA/swagger.json?oas_version=2.0&sap-user=*user*&sap-password=*password*
+
+ Make sure to replace the *user* and *password* with the username and password of your SAP system (alternatively you can also download and upload the Swagger file) and click on *Import* -> *Continue*
 ![Download](Images\20-ImportContinue.jpg)
   
  
-Now double check the configuration. Click on Security,
+Now double check the configuration. Click on *Security*,
 ![Download](Images\21-ConnectorWizard.jpg)
   
 Definition
+
 ![Download](Images\22-PP-Wizard-Step2.jpg)
-![Download](Images\22-PP-Wizard-Step3.jpg)
+
+![Download](Images\23-PP-Wizard-Step3.jpg)
  ---
  
  ## Create Custom Connector
- Now open Power Apps, (http://make.powerapps.com/)[http://make.powerapps.com/] and click on Create -> "Canvas app from blank"
+ Now open Power Apps, [http://make.powerapps.com/](http://make.powerapps.com/) and click on *Create* -> *Canvas app from blank*
   ![image](Images\30-PPCreateApp.jpg)
  
- Enter an App name and click on Create
+ Enter an App name and click on *Create*
  ![image](Images\31-PPEnterAppName.jpg)
  
  In the Apps Cancas click on the Data icon on the right, click on "Add data" Search for the Customer Connector name you previously created and select it. 
  ![image](Images\32-PPAppsCanvas.jpg)
  
- As a result you should see the new data source "Search Help"
+ As a result you should see the new data source *SearchHelp:SH(Searchhelp)*
  ![image](Images\33-DataAdded.jpg)
  
  Now click on Insert and Drag and drop a Text Input and Button onto the canvas
@@ -100,16 +103,16 @@ Definition
  
  Now select the button you created. Make sure that the Action for the Button is OnSelect and enter the formula, 
 
->>>> ClearCollect(Customers, 'SearchHelp:SH(Searchhelp)|DEBIA-Customers(general)'.POSTexecute(800,{MAXROWS:100, MCOD1:Table({SIGN: "I",OPTION: "CP",LOW: Concatenate("*",TextInput1.Text,"*"),HIGH: ""})}).result.DATA);
+``` ClearCollect(Customers, 'SearchHelp:SH(Searchhelp)|DEBIA-Customers(general)'.POSTexecute(800,{MAXROWS:100, MCOD1:Table({SIGN: "I",OPTION: "CP",LOW: Concatenate("*",TextInput1.Text,"*"),HIGH: ""})}).result.DATA); ```
 
   ![image](Images\36-ClearCollect.jpg)
  
- Note: 
- * ClearCollect creates a new collection that we can easily poulate and use in other items. 
- * SearchHelp:SH is the Custom Connection that we created in step xxx. 
- * The POSTexecute step is the function to lookup the customer information 
- * it requires several mandatory parameters, like SAP-Client (800), MAXROWS (a default value of 100 as an example), MCOD1 (a Table with information on what customer information we should look for)
- * TextInput1.Text is the value the user interes in the Input Field. You can find the exect propertyname by clicking on the Next infput field
+ **Note:** 
+> * ClearCollect creates a new collection that we can easily poulate and use in other items. 
+> * SearchHelp:SH is the Custom Connection that we created in step xxx. 
+> * The POSTexecute step is the function to lookup the customer information 
+> * it requires several mandatory parameters, like SAP-Client (800), MAXROWS (a default value of 100 as an example), MCOD1 (a Table with information on what customer information we should look for)
+> * TextInput1.Text is the value the user interes in the Input Field. You can find the execat property name by clicking on the Next infput field
  
  ![image](Images\37-TextInputField.jpg)
  
