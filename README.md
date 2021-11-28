@@ -22,15 +22,20 @@ Fill in the required information.
 Note: If you have problems signing in with your work / school account, go to https://developer.microsoft.com/en-us/microsoft-365/dev-program and sign up for the Microsoft 365 Developer Program first. 
 
 ## Download and install the required files from Neptune
-lkj
-ölkj
-ölkj
+After registration to the Neptune Developer Trial you will get credentials and a link to login to the Neptune Portal. From there Click on Product Download -> Download Now
+![Neptune Portal](Images/06-DownloadNeptune.jpg)
 
+From the Neptune DX Platform - SAP Edition, select "Long Term Support Release -> DXP 21 (2021) and download the ZIP file. 
+![Download DXP](Images/07-DownloadDXP21.jpg)
+
+Now follow the instructions outlined in the Neptune-DXP SAP Edition Installation-Guide.pdf and install the two transport files. 
+
+Also make sure to active the Neptune servies in SICF 
 
 ## Start Neptune 
-Go to your SAP system and start transaction xxx
+From the SAP GUi and start transaction  **/NEPTUNE/DESIGNER** and select **Run in Browser**
 
-A browser will open, select the API Factory
+A browser will open with the Netpune DX Platofrm.  Select the *API Factory*
 ![Download](Images/10-OpenAPIFactory.jpg)
 
 Select in the ObjectTypeName column select the /NEPTUNE/CL_DR_LIB_DDIC_SHLP_X object:
@@ -52,7 +57,10 @@ Click on the *Swagger UI* and *Explore* to see the dynamically created specifica
 From the here you can already test the function. 
 ![Download](Images/16-Testing.jpg)
 
-**Note:** In my setup I am using an Azure API Management to actually expose the any REST API to the internet. This allows me to protect the SAP system, but also to quickly implement features like Single Sign-On from Azure Active Directory to the SAP sytem (see also xxx from Martin Pankraz and xxx from Martin Raepple).
+**Note:** In my setup I am using an Azure API Management to actually expose the any REST API to the internet. This allows me to protect the SAP system, but also to quickly implement features like Single Sign-On from Azure Active Directory to the SAP sytem (see also 
+* [.NET speaks OData too – how to implement Azure App Service with SAP Gateway](https://blogs.sap.com/2021/08/12/.net-speaks-odata-too-how-to-implement-azure-app-service-with-sap-odata-gateway/) from **Martin Pankraz** and 
+* [Principal propagation in a multi-cloud solution between Microsoft Azure and SAP Business Technology Platform (BTP), Part IV: SSO with a Power Virtual Agents Chatbot and On-Premises Data Gateway](https://blogs.sap.com/2021/04/13/principal-propagation-in-a-multi-cloud-solution-between-microsoft-azure-and-sap-business-technology-platform-btp-part-iv-sso-with-a-power-virtual-agent-chatbot-and-on-premises-data-gateway/) from **Martin Raepple**).
+
 If your system already exposes this API to the internet, there is nothing else for you to do.  
 ![Download](Images/17-API-Management.jpg)
 
