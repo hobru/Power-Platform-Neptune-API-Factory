@@ -135,7 +135,7 @@ Definition
  ![image](Images/40-ColumnNames.jpg)
  
  Enter some letters in the Input field and click the button. As a result you should see customer data displayed in the Power App. 
- ![image](Images/41-TryitOut).jpg
+ ![image](Images/41-TryitOut.jpg)
  
  
  
