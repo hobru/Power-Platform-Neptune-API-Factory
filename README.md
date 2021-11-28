@@ -29,12 +29,20 @@ After registration to the Neptune Developer Trial you will get credentials and a
 From the Neptune DX Platform - SAP Edition, select *Long Term Support Release* -> *DXP 21 (2021)* and download the ZIP file. 
 ![Download DXP](Images/07-DownloadDXP21.jpg)
 
-Now follow the instructions outlined in the Neptune-DXP SAP Edition Installation-Guide.pdf and install the two transport files. 
+Now follow the instructions outlined in the Neptune-DXP SAP Edition Installation-Guide.pdf and install the transport files. 
+
+![](Images/08-STMS-Import.jpg) 
 
 Also make sure to active the Neptune servies in SICF 
+![](Images/09-SICF.jpg)
+
+After activation run the  /NEPTUNE/INSTALLATION_CHECK from SE38
+![](Images/09a-InstallationCheck.jpg)
+
+
 
 ## Start Neptune 
-From the SAP GUi and start transaction  **/NEPTUNE/DESIGNER** and select **Run in Browser**
+From the SAP GUI and start transaction  **/NEPTUNE/COCKPIT** 
 
 A browser will open with the Netpune DX Platofrm.  Select the *API Factory*
 ![Download](Images/10-OpenAPIFactory.jpg)
