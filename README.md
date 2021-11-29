@@ -1,5 +1,15 @@
 # Power-Platform-Neptune-API-Factory
-This guide outlines the steps to get started with a simple Power App that connects to an SAP system using Neptunes API Factory. The scenario was also shown in a joint webinar with Neptune Software, [How Microsoft Power Platform customers can connect to SAP backends](https://info.neptune-software.com/acton/media/23527/microsoft-power-plaftorm-and-neptune-dxp)
+This guide outlines the steps to get started with a simple Power App that connects to an SAP system using Neptunes API Factory. In the end the Power App will be able to look up customers in the SAP system using a Search Help function. The scenario was also shown in a joint webinar with Neptune Software, [How Microsoft Power Platform customers can connect to SAP backends](https://info.neptune-software.com/acton/media/23527/microsoft-power-plaftorm-and-neptune-dxp)
+
+Power Platform comes with several out of the box connectors that allow you to [connect to an SAP System](https://flow.microsoft.com/en-us/blog/hyperautomation-special-video-series-for-sap-based-integration-automation-with-power-automate/). 
+- The Power Automate Desktop RPA automation is a good starting point to connect via the SAP UI to your SAP system: [RPA Playbook for SAP GUI Automation with Power Automate: API flows, UI flows, and Power Automate Desktop](https://flow.microsoft.com/en-au/blog/rpa-playbook-for-sap-gui-automation-with-power-automate-api-flows-ui-flows-and-power-automate-desktop/)
+- The SAP ERP Connector allows you to connect to BAPI / RFCs in your SAP system using the on-prem data Gateway and the .NET Connector: [General availability of the SAP ERP connector](https://powerapps.microsoft.com/en-us/blog/general-availability-of-the-sap-erp-connector/)
+- The OData Connector (currently in private preview) enables you to connect to OData service exposed by the SAP system 
+
+The approach outlined here uses the Neptune API Factory -- an installation that customers need to do in the SAP system -- to expose any BAPI, Function Modules, ALVs, ... via RESTful services. Using an OpenAPI / Swagger specification these REST services can easily be imported / used in the Power Platform using the Custom Connector. 
+
+All the steps outlined below can be done using a Trial account both on the Neptune and the Microsoft side. 
+
 
 ## Sign up to the Netpune Developer Trial
 Go to https://www.neptune-software.com/free-trial/ scroll down and click on "Download Free Trial"
@@ -29,7 +39,7 @@ After registration to the Neptune Developer Trial you will get credentials and a
 From the Neptune DX Platform - SAP Edition, select *Long Term Support Release* -> *DXP 21 (2021)* and download the ZIP file. 
 ![Download DXP](Images/07-DownloadDXP21.jpg)
 
-Now follow the instructions outlined in the Neptune-DXP SAP Edition Installation-Guide.pdf and install the transport files. 
+Now follow the instructions outlined in the *Neptune-DXP SAP Edition Installation-Guide.pdf* and install the transport files. 
 
 ![](Images/08-STMS-Import.jpg) 
 
