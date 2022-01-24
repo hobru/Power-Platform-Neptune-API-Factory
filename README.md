@@ -93,7 +93,9 @@ Under Data -> Customer Connectors click on "+ New custom connector" and select "
 
 Enter the URL from the Swagger.ui, e.g. 
 
-https://*yourSAPSystem*:*port*/neptune/api/dynamic/neptune/cl_dr_lib_ddic_shlp_x/SH/DEBIA/swagger.json?oas_version=2.0&sap-user=*user*&sap-password=*password*
+https://*yourSAPSystem*:*port*/neptune/api/dynamic/neptune/cl_dr_lib_ddic_shlp_x/SH/DEBIA/swagger.json?oas_version=2.0&sap-user=*user*&sap-password=*password*&exclude_response_examples=true&namespace_separator=-
+
+**Please note that you might need to add the parameters *exclude_response_examples=true* and *namespace_separator=-* if you do get error "Definition is not valid" when creating the Customer Connector in Power Platform**
 
  Make sure to replace the *user* and *password* with the username and password of your SAP system (alternatively you can also download and upload the Swagger file) and click on *Import* -> *Continue*
 ![Download](Images/20-ImportContinue.jpg)
